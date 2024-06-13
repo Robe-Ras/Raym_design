@@ -1,0 +1,352 @@
+/* ###### Circle Menu ###### */
+
+:root {
+  font-size: 14px;
+  --clip-x: 50%;
+  --clip-y: 50%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: rgb(255, 223, 167);
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+/* Taille Logo */
+.logo {
+  width: 100px; 
+  height: auto;
+  margin-right: auto; 
+  margin-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+
+/* Bouton menu rond */
+.header__button {
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -18px;
+  outline: none;
+  animation-duration: 300ms;
+  animation-timing-function: ease;
+  margin-top: 2.7em;
+  margin-right: 2em;
+}
+
+.header__button[data-open='true'] {
+  background-color: rgb(255, 221, 0);
+  animation-name: scale;
+}
+
+.header__button[data-open='false'] {
+  transition: background-color 250ms linear;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(100%);
+  }
+}
+
+
+
+@keyframes reveal {
+  0% {
+    clip-path: circle(0% at var(--clip-x) var(--clip-y));
+  }
+  100% {
+    clip-path: circle(150% at var(--clip-x) var(--clip-y));
+  }
+}
+
+@keyframes hide {
+  0% {
+    clip-path: circle(150% at var(--clip-x) var(--clip-y));
+  }
+  70% {
+    clip-path: circle(2% at var(--clip-x) var(--clip-y));
+  }
+  94% {
+    clip-path: circle(1.6% at var(--clip-x) var(--clip-y));
+  }
+  95% {
+    clip-path: circle(1.5% at var(--clip-x) var(--clip-y));
+  }
+  96% {
+    clip-path: circle(1% at var(--clip-x) var(--clip-y));
+  }
+  97% {
+    clip-path: circle(0.5% at var(--clip-x) var(--clip-y));
+  }
+  98% {
+    clip-path: circle(0.3% at var(--clip-x) var(--clip-y));
+  }
+  99% {
+    clip-path: circle(0.1% at var(--clip-x) var(--clip-y));
+  }
+  100% {
+    clip-path: circle(0% at var(--clip-x) var(--clip-y));
+  }
+}
+
+.header__nav {
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  clip-path: circle(0% at var(--clip-x) var(--clip-y));
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.header__nav[data-active='true'] {
+  animation: reveal 0.7s ease-out forwards;
+}
+
+.header__nav[data-active='false'] {
+  animation: hide 1.4s ease-out forwards; 
+}
+
+.header__menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 5em;
+  left: 0;
+}
+
+.header__menu > .header__menu-item {
+  font-size: 3em;
+  margin-left: 1.6em;
+  list-style: none;
+}
+
+.header__menu > .header__menu-item:not(:last-of-type) {
+  margin-bottom: 0;
+}
+
+.header__menu-item a {
+  color: rgb(255, 221, 0);
+  text-decoration: none;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  
+}
+
+.header__menu-item a:hover {
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ###### End Circle Menu ######*/
+
+
+/* ###### Knockout Text Video Background ###### */
+
+/* Hauteur de la vidéo à la moitié de la page */
+.clip-text-video {
+  position: relative;
+  height: 50vh; 
+}
+ 
+video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.clip-text-video__text {
+  position: absolute;
+  top: 0.1vh;
+  width: 100vw;
+  height: 50vh; /* Ajuste la hauteur pour correspondre à la vidéo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0 solid white;
+  color: #fff;
+  overflow: hidden;
+  background: #000;
+  mix-blend-mode: multiply;
+}
+
+.clip-text-video__text p {
+  font-size: 35em;
+  line-height: 1;
+  font-weight: 900;
+  font-family: 'Archivo Black', sans-serif; /* Changez la police en Archivo Black */
+  letter-spacing: 0.05em; /* Ajoutez cette ligne pour espacer les lettres */
+}
+
+/* Taille de texte pour les tablettes */
+@media (max-width: 1024px) {
+  .clip-text-video__text p {
+    font-size: 25em; 
+  }
+}
+
+/* Taille de texte pour les petits écrans */
+@media (max-width: 768px) {
+  .clip-text-video__text p {
+    font-size: 15em; 
+  }
+}
+
+/* Taille de texte pour les très petits écrans */
+@media (max-width: 480px) {
+  .clip-text-video__text p {
+    font-size: 8em; 
+  }
+}
+
+/* Hauteur du fond noir au-dessus de la vidéo */
+.clip-text-video__overlay {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 5vh; 
+  background: #000;
+}
+
+/* Hauteur du fond noir en bas de la vidéo */
+.clip-text-video__overlay-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 0vh; 
+  background: #000;
+}
+
+/* Pour les tablettes */
+@media (max-width: 1024px) {
+  .header__menu > .header__menu-item {
+    font-size: 2em; 
+  }
+
+  .header__button {
+    width: 40px; 
+    height: 40px;
+  }
+}
+
+/* Pour les petits écrans */
+@media (max-width: 768px) {
+  .header__menu > .header__menu-item {
+    font-size: 1.5em; 
+  }
+
+  .header__button {
+    width: 35px; 
+    height: 35px;
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  .header__menu > .header__menu-item {
+    font-size: 1em; 
+  }
+
+  .header__button {
+    width: 30px; 
+    height: 30px;
+  }
+}
+
+/* Masquer la vidéo et centrer le menu pour tablette et mobile */
+@media (max-width: 1024px) {
+  .clip-text-video {
+    display: none;
+  }
+
+  .header__nav {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0); /* Fond noir */
+  }
+
+  .header__menu {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__menu > .header__menu-item {
+    margin: 1em 0;
+  }
+}
+
+/* Centrer le menu pour les très petits écrans */
+@media (max-width: 480px) {
+  .clip-text-video {
+    display: none;
+  }
+
+  .header__nav {
+    justify-content: flex-start; /* Remonte le menu */
+    align-items: center;
+    background-color: rgb(0, 0, 0); /* Fond noir */
+    height: 100vh; /* Assure que le menu occupe toute la hauteur */
+  }
+
+  .header__menu {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__menu > .header__menu-item {
+    margin: 1em 0;
+    display: block; /* Assurez-vous que les onglets sont visibles */
+  }
+}
+
+/* ###### End Knockout Text Video Background ###### */
