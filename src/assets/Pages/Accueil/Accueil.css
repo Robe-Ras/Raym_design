@@ -1,9 +1,11 @@
+/* ### Hero Categories ### */
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
-  
+  overflow: auto; /* Assurez-vous que le défilement est activé */
 }
 
 ::-webkit-scrollbar {
@@ -13,6 +15,8 @@
 .wrapper {
   display: grid;
   grid-template-rows: 80px 1fr;
+  
+  
 }
 
 
@@ -20,15 +24,18 @@ main {
   width: 100vw;
   display: -webkit-box;
   display: flex;
+  overflow: auto; /* Assurez-vous que le défilement est activé */
 }
 
 .accueil-section {
-  width: 33.33vw; /* Changez la largeur à 33.33% */
-  height: 50em; /* Définissez la hauteur fixe */
+  width: 33.33vw; 
+  height: 100vh; /* Assure que la section occupe toute la hauteur de l'écran */
+  background-size: contain;
+  background-position: center;
   display: flex;
-  align-items: flex-start; /* Aligne les éléments en haut de la section */
+  align-items: flex-end; 
   justify-content: center;
-  margin-bottom: 2em; /* Ajoutez cette ligne */
+  margin-bottom: 2em; 
   margin-top: 2em;
 }
 .accueil-section:nth-child(odd) {
@@ -65,12 +72,7 @@ main {
   margin-right: 2em; 
 }
 
-.content h1 {
-  color: white;
-  font-size: 2em; 
-  font-family: "Chakra Petch", sans-serif; 
-  margin-top: 0.5em;
-}
+
 
 @media screen and (min-width: 981px) {
   .accueil-section {
@@ -98,37 +100,52 @@ main {
   }
 }
 @media screen and (max-width: 980px) {
-  header {
-    position: fixed;
-  }
-
   main {
-    display: unset;
+    display: flex;
+    flex-wrap: nowrap;
     margin-top: 80px;
   }
   main .accueil-section {
-    float: left;
-    width: 50vw;
-    height: calc(50vh - 40px);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    width: 33.33vw;
+    height: auto;
+    min-height: 50vh; /* Ajuste la hauteur minimale pour les tablettes */
   }
-  main .accueil-section .content {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-@media screen and (max-width: 767px) {
-  nav a {
-    display: none;
-  }
-  nav span {
-    display: -webkit-box;
+  main .accueil-section .content button {
+    width: 80%;
+    font-size: 1.5rem; /* Taille du texte pour les tablettes */
+    padding: 1em;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
   }
 }
 @media screen and (max-width: 480px) {
   main .accueil-section {
-    display: none; /* Masquer les sections en version mobile */
+    width: 33.33vw;
+    height: auto;
+    min-height: 50vh; /* Ajuste la hauteur minimale pour les mobiles */
+  }
+  main .accueil-section .content button {
+    width: 100%;
+    font-size: 1.2rem; /* Taille du texte pour les mobiles */
+    padding: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .accueil-section {
+    height: 80vh; /* Réduit la hauteur de 20% pour les écrans 4K */
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .accueil-section {
+    height: 70vh; /* Réduit la hauteur de 30% pour les écrans FHD */
   }
 }
 
@@ -137,6 +154,18 @@ main {
   height: 100%;
   object-fit: cover;
 }
+
+/* ### Hero Categories END### */
+
+
+/* ### BANNER ### */
+
+
+
+/* ### BANNER END ### */
+
+
+
 
 
 

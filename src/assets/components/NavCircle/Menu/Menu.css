@@ -58,7 +58,7 @@ header {
 }
 
 .header__button[data-open='true'] {
-  background-color: rgb(255, 221, 0);
+  background-color: rgb(255, 224, 192);
   animation-name: scale;
 }
 
@@ -127,7 +127,6 @@ header {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -153,7 +152,7 @@ header {
 
 .header__menu > .header__menu-item {
   font-size: 3em;
-  margin-left: 1.6em;
+  margin-left: 1.7em;
   list-style: none;
 }
 
@@ -162,7 +161,7 @@ header {
 }
 
 .header__menu-item a {
-  color: rgb(255, 221, 0);
+  color: rgb(255, 224, 192);
   text-decoration: none;
   font-family: "Chakra Petch", sans-serif;
   font-weight: 300;
@@ -200,6 +199,14 @@ video {
   object-fit: cover;
 }
 
+.clip-text-video__overlay {
+  position: absolute;
+  top: -7vh;
+  width: 100vw;
+  height: 10vh; 
+  background: #000;
+}
+
 .clip-text-video__text {
   position: absolute;
   top: 0.1vh;
@@ -216,18 +223,26 @@ video {
   mix-blend-mode: multiply;
 }
 
+.clip-text-video__overlay-bottom {
+  position: absolute;
+  bottom: -30vh;
+  width: 100vw;
+  height: 40vh; 
+  background: #000;
+}
+
 .clip-text-video__text p {
   font-size: 35em;
   line-height: 1;
   font-weight: 900;
-  font-family: 'Archivo Black', sans-serif; /* Changez la police en Archivo Black */
-  letter-spacing: 0.05em; /* Ajoutez cette ligne pour espacer les lettres */
+  font-family: 'Archivo Black', sans-serif; 
+  letter-spacing: 0.02em; 
 }
 
 /* Taille de texte pour les tablettes */
 @media (max-width: 1024px) {
   .clip-text-video__text p {
-    font-size: 25em; 
+    font-size: 20em; 
   }
 }
 
@@ -243,24 +258,6 @@ video {
   .clip-text-video__text p {
     font-size: 8em; 
   }
-}
-
-/* Hauteur du fond noir au-dessus de la vidéo */
-.clip-text-video__overlay {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 5vh; 
-  background: #000;
-}
-
-/* Hauteur du fond noir en bas de la vidéo */
-.clip-text-video__overlay-bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  height: 0vh; 
-  background: #000;
 }
 
 /* Pour les tablettes */
@@ -296,56 +293,6 @@ video {
   .header__button {
     width: 30px; 
     height: 30px;
-  }
-}
-
-/* Masquer la vidéo et centrer le menu pour tablette et mobile */
-@media (max-width: 1024px) {
-  .clip-text-video {
-    display: none;
-  }
-
-  .header__nav {
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 0, 0); /* Fond noir */
-  }
-
-  .header__menu {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header__menu > .header__menu-item {
-    margin: 1em 0;
-  }
-}
-
-/* Centrer le menu pour les très petits écrans */
-@media (max-width: 480px) {
-  .clip-text-video {
-    display: none;
-  }
-
-  .header__nav {
-    justify-content: flex-start; /* Remonte le menu */
-    align-items: center;
-    background-color: rgb(0, 0, 0); /* Fond noir */
-    height: 100vh; /* Assure que le menu occupe toute la hauteur */
-  }
-
-  .header__menu {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header__menu > .header__menu-item {
-    margin: 1em 0;
-    display: block; /* Assurez-vous que les onglets sont visibles */
   }
 }
 
