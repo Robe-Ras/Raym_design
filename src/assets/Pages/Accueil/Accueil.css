@@ -5,7 +5,7 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
-  overflow: auto; /* Assurez-vous que le défilement est activé */
+  overflow: auto; 
 }
 
 ::-webkit-scrollbar {
@@ -24,12 +24,12 @@ main {
   width: 100vw;
   display: -webkit-box;
   display: flex;
-  overflow: auto; /* Assurez-vous que le défilement est activé */
+  overflow: auto; 
 }
 
 .accueil-section {
   width: 33.33vw; 
-  height: 100vh; /* Assure que la section occupe toute la hauteur de l'écran */
+  height: 100vh; 
   background-size: contain;
   background-position: center;
   display: flex;
@@ -108,44 +108,44 @@ main {
   main .accueil-section {
     width: 33.33vw;
     height: auto;
-    min-height: 50vh; /* Ajuste la hauteur minimale pour les tablettes */
+    min-height: 50vh; 
   }
   main .accueil-section .content button {
     width: 80%;
-    font-size: 1.5rem; /* Taille du texte pour les tablettes */
+    font-size: 1.5rem; 
     padding: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    white-space: nowrap; 
   }
 }
 @media screen and (max-width: 480px) {
   main .accueil-section {
     width: 33.33vw;
     height: auto;
-    min-height: 50vh; /* Ajuste la hauteur minimale pour les mobiles */
+    min-height: 50vh; 
   }
   main .accueil-section .content button {
     width: 100%;
-    font-size: 1.2rem; /* Taille du texte pour les mobiles */
+    font-size: 1.2rem; 
     padding: 0.8em;
     display: flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    white-space: nowrap; 
   }
 }
 
 @media screen and (min-width: 3840px) {
   .accueil-section {
-    height: 80vh; /* Réduit la hauteur de 20% pour les écrans 4K */
+    height: 80vh; 
   }
 }
 
 @media screen and (max-width: 1920px) {
   .accueil-section {
-    height: 70vh; /* Réduit la hauteur de 30% pour les écrans FHD */
+    height: 70vh; 
   }
 }
 
@@ -158,11 +158,9 @@ main {
 /* ### Hero Categories END### */
 
 
-/* ### BANNER ### */
 
 
 
-/* ### BANNER END ### */
 
 
 

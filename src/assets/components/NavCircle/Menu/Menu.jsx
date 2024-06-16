@@ -58,8 +58,12 @@ const Navbar = () => {
 
   return (
     <div className="menu-body">
-      <header>
+      <header className="header__content p-4">
         <img src={logo} alt="Logo" className="logo" />
+        <div className="flex items-center space-x-10 text-black text-xl icons-container">
+          <i className="fas fa-user text-2xl"></i>
+          <i className="fas fa-shopping-cart text-2xl cart-icon"></i>
+        </div>
         <button className="header__button nav-btn-js" type="button"></button>
         <nav className="header__nav nav-js" data-active={isRevealed ? 'true' : 'false'}>
           <section className="clip-text-video">
