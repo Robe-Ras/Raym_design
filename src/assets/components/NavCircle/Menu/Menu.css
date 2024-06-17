@@ -298,6 +298,8 @@ video {
 
 /* ###### End Knockout Text Video Background ###### */
 
+/* ###### Navbar ###### */
+
 .header__content {
   display: flex;
   align-items: center;
@@ -306,30 +308,29 @@ video {
 }
 
 .header__button {
-  margin: 0; 
-  position: relative; 
-  top: 0; 
+  margin: 0;
+  position: relative;
+  top: 0;
 }
 
 .icons-container {
   display: flex;
   align-items: center;
-  gap: 0em; 
 }
 
 .cart-icon {
-  margin-right: 5em; 
+  margin-left: 1em; /* Ajustez cette valeur selon vos besoins */
 }
 
 @media (max-width: 768px) {
   .header__content {
-    padding: 0 1em; 
+    padding: 0 1em;
   }
 
   .header__button {
-    margin-right: 0; 
+    margin-right: 0;
   }
 }
 
-
+/* ###### End Navbar ###### */
 

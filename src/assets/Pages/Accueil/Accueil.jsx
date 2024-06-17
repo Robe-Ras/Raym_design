@@ -8,7 +8,7 @@ const Accueil = () => {
             <div className="banner p-6 py-12 text-gray-50 bg-red-600 ">
                 <div className="container mx-auto">
                     <div className="flex flex-col lg:flex-row items-center justify-between">
-                        <h2 className="text-center text-5xl tracking-tighter font-bold">Soldes d'été
+                        <h2 className="text-center text-5xl tracking-tighter font-bold">Soldes d&apos;été
                             <br className="sm:hidden" /> -30% sur certains produits
                         </h2>
                         <div className="space-x-2 text-center py-2 lg:py-0">
