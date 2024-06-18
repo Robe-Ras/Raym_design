@@ -60,9 +60,9 @@ const Navbar = () => {
     <div className="menu-body">
       <header className="header__content p-4">
         <img src={logo} alt="Logo" className="logo" />
-        <div className="flex items-center text-black text-xl space-x-4">
+        <div className="flex items-center text-black text-xl space-x-4 icons-container">
           <i className="fas fa-user text-2xl cursor-pointer"></i>
-          <i className="fas fa-shopping-cart text-2xl ml-4"></i>
+          <i className="fas fa-shopping-cart text-2xl cart-icon"></i>
         </div>
         <button className="header__button nav-btn-js" type="button"></button>
         <nav className="header__nav nav-js" data-active={isRevealed ? 'true' : 'false'}>

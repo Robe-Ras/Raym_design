@@ -3,6 +3,7 @@ import Menu from './assets/components/NavCircle/Menu/Menu';
 import Accueil from './assets/Pages/Accueil/Accueil';
 import Login from './assets/Pages/Login/Login';
 import Register from './assets/Pages/Register/Register';
+import Footer from './assets/components/Footer/Footer';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
