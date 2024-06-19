@@ -1,8 +1,6 @@
-import React from 'react';
-
 const Footer = () => {
   return (
-    <footer className="body-font bg-black">
+    <footer className="body-font bg-black footer-fixed">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex items-center md:justify-start justify-center">
           <img src="src/assets/Images/raymW.png" alt="RAYM Logo" className="w-20 h-50"/>
@@ -40,3 +38,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

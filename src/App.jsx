@@ -5,6 +5,7 @@ import Login from './assets/Pages/Login/Login';
 import Register from './assets/Pages/Register/Register';
 import ResetPassword from './assets/Pages/ResetPassword/ResetPassword';
 import ForgetPassword from './assets/Pages/ForgetPassword/ForgetPassword';
+import Configurator from './assets/Pages/Configurator/Configurator'; 
 import Footer from './assets/components/Footer/Footer';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/reset-password" element={<ResetPassword />} /> 
         <Route path="/forget-password" element={<ForgetPassword />} />
+        <Route path="/configurator" element={<Configurator />} /> 
       </Routes>
       <Footer />
     </Router>
@@ -24,4 +26,3 @@ const App = () => {
 };
 
 export default App;
-
