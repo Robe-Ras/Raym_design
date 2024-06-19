@@ -6,19 +6,7 @@
   --clip-y: 50%;
 }
 
-body {
-  margin: 0;
-  height: 100vh;
-  background-color: rgb(255, 223, 167);
-  font-family: 'Roboto', Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.2;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
+
 
 header {
   position: relative;
@@ -63,6 +51,11 @@ header {
   transition: background-color 250ms linear;
 }
 
+.header__button.open {
+  background-color: rgb(255, 224, 192);
+  animation-name: scale;
+}
+
 @keyframes scale {
   from {
     transform: scale(0);
@@ -85,27 +78,6 @@ header {
 @keyframes hide {
   0% {
     clip-path: circle(150% at var(--clip-x) var(--clip-y));
-  }
-  70% {
-    clip-path: circle(2% at var(--clip-x) var(--clip-y));
-  }
-  94% {
-    clip-path: circle(1.6% at var(--clip-x) var(--clip-y));
-  }
-  95% {
-    clip-path: circle(1.5% at var(--clip-x) var(--clip-y));
-  }
-  96% {
-    clip-path: circle(1% at var(--clip-x) var(--clip-y));
-  }
-  97% {
-    clip-path: circle(0.5% at var(--clip-x) var(--clip-y));
-  }
-  98% {
-    clip-path: circle(0.3% at var(--clip-x) var(--clip-y));
-  }
-  99% {
-    clip-path: circle(0.1% at var(--clip-x) var(--clip-y));
   }
   100% {
     clip-path: circle(0% at var(--clip-x) var(--clip-y));
@@ -305,6 +277,7 @@ video {
   display: flex;
   align-items: center; 
   margin-left: auto; 
+  position: relative;
 }
 
 .cart-icon {
@@ -321,5 +294,46 @@ video {
 
 /* ###### End Navbar ###### */
 
+.icons-container {
+  position: relative;
+}
 
+.dropdown-menu {
+  position: absolute;
+  top: 72px; /* Valeur par défaut pour les grands écrans */
+  right: 14em; /* Valeur par défaut pour les grands écrans */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 50; /* Assurez-vous que le z-index est supérieur à celui du conteneur */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
 
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
