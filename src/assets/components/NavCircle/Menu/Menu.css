@@ -32,7 +32,7 @@ header {
   width: 100px; 
   height: auto;
   margin-right: auto; 
-  margin-left: 0.5em;
+  margin-left: 1em;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -47,8 +47,8 @@ header {
   border: 0;
   cursor: pointer;
   position: relative;
-  margin-top: 2.7em;
-  margin-right: 2em;
+  margin-top: 0em;
+  margin-right: 1em;
   outline: none;
   animation-duration: 300ms;
   animation-timing-function: ease;
@@ -296,34 +296,30 @@ video {
 
 .header__content {
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: space-between;
   width: 100%;
 }
 
-.header__button {
-  margin: 0;
-  position: relative;
-  top: 0;
-}
-
 .icons-container {
   display: flex;
-  align-items: center;
+  align-items: center; 
+  margin-left: auto; 
 }
 
 .cart-icon {
-  margin-left: 1em; /* Ajustez cette valeur selon vos besoins */
+  margin-left: 2em; 
+  margin-right: 3em;
 }
+
 
 @media (max-width: 768px) {
   .header__content {
     padding: 0 1em;
   }
-
-  .header__button {
-    margin-right: 0;
-  }
 }
 
 /* ###### End Navbar ###### */
+
+
+
