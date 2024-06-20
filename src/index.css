@@ -27,7 +27,7 @@ body {
   margin: 0;
   height: 100vh;
   background-color: rgb(255, 223, 167);
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 1rem;
   line-height: 1.2;
   overflow: hidden;

@@ -6,7 +6,8 @@
   --clip-y: 50%;
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 header {
   position: relative;
@@ -130,13 +131,17 @@ header {
 .header__menu-item a {
   color: rgb(255, 224, 192);
   text-decoration: none;
-  font-family: "Chakra Petch", sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-weight: 300;
   font-style: normal;
 }
 
 .header__menu-item a:hover {
   font-style: italic;
+}
+
+.no-hover a:hover {
+  font-style: normal; 
 }
 
 * {
@@ -201,7 +206,7 @@ video {
   font-size: 35em;
   line-height: 1;
   font-weight: 900;
-  font-family: 'Archivo Black', sans-serif; 
+  font-family: 'Archivo Black', sans-serif !important; 
   letter-spacing: 0.02em; 
 }
 
@@ -338,6 +343,7 @@ video {
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
   padding: 0 20px; 
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .dropdown-menu li:first-child {
@@ -351,6 +357,7 @@ video {
 .dropdown-menu li a {
   color: white;
   font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .dropdown-menu li a:hover {
@@ -398,6 +405,7 @@ video {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .dropdown-menu li a:hover {
