@@ -7,13 +7,29 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const buttonRef = useRef(null);
   const navRef = useRef(null);
+  const userIconRef = useRef(null);
+  const closeTimeoutRef = useRef(null);
 
   const handleUserIconHover = () => {
+    clearTimeout(closeTimeoutRef.current);
     setIsDropdownOpen(true);
   };
 
   const handleUserIconLeave = () => {
-    setIsDropdownOpen(false);
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 500);
+  };
+
+  const handleDropdownHover = () => {
+    clearTimeout(closeTimeoutRef.current);
+    setIsDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 500);
   };
 
   const handleMenuButtonClick = () => {
@@ -43,17 +59,18 @@ const Navbar = () => {
     <div className="menu-body">
       <header className="header__content p-4">
         <img src={logo} alt="Logo" className="logo" />
-        <div className="icons-container" onMouseEnter={handleUserIconHover} onMouseLeave={handleUserIconLeave}>
-          <i className="fas fa-user text-2xl cursor-pointer"></i>
+        <div className="icons-container">
+          <i ref={userIconRef} className="fas fa-user text-2xl cursor-pointer user-icon" onMouseEnter={handleUserIconHover} onMouseLeave={handleUserIconLeave}></i>
           <i className="fas fa-shopping-cart text-2xl cart-icon"></i>
           <button ref={buttonRef} className={`header__button nav-btn-js ${isRevealed ? 'open' : ''}`} type="button" onClick={handleMenuButtonClick}></button>
         </div>
       </header>
-      <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
+      <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`} onMouseEnter={handleDropdownHover} onMouseLeave={handleDropdownLeave}>
         <ul>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="#">Mon compte</a></li>
+          <li><a href="#">Connection</a></li>
+          <li><a href="#">Creer un compte</a></li>
+          <li><a href="#">Deconnection</a></li>
         </ul>
       </div>
       <nav ref={navRef} className="header__nav nav-js" data-active={isRevealed ? 'true' : 'false'}>

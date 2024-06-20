@@ -274,10 +274,10 @@ video {
 }
 
 .icons-container {
-  display: flex;
-  align-items: center; 
-  margin-left: auto; 
   position: relative;
+  display: flex;
+  align-items: center;
+  overflow: visible; 
 }
 
 .cart-icon {
@@ -285,6 +285,32 @@ video {
   margin-right: 3em;
 }
 
+.user-icon {
+  padding: 0.5em; 
+}
+
+@keyframes zoomBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  70% {
+    transform: scale(0.9); /* Rétrécit en dessous de la taille normale */
+  }
+  90% {
+    transform: scale(1.1); /* Légère expansion avant de revenir à la taille normale */
+  }
+}
+
+.user-icon:hover {
+  animation: zoomBounce 0.3s ease-in-out;
+  color: rgba(0, 0, 0, 0.7); 
+}
 
 @media (max-width: 768px) {
   .header__content {
@@ -292,7 +318,6 @@ video {
   }
 }
 
-/* ###### End Navbar ###### */
 
 .icons-container {
   position: relative;
@@ -302,21 +327,50 @@ video {
   position: absolute;
   top: 72px; /* Valeur par défaut pour les grands écrans */
   right: 14em; /* Valeur par défaut pour les grands écrans */
-  background-color: white;
+  background-color: black;
+  color: white;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 50; /* Assurez-vous que le z-index est supérieur à celui du conteneur */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  padding: 0 20px; /* Ajoute du padding à gauche et à droite */
+}
+
+.dropdown-menu li {
+  padding: 10px 0; /* Ajuste le padding en haut et en bas */
+}
+
+.dropdown-menu li a {
+  color: white;
+}
+
+@keyframes dropdownBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  90% {
+    transform: scale(1.05);
+  }
 }
 
 .dropdown-menu.open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  animation: dropdownBounce 0.3s ease-in-out;
 }
 
 .dropdown-menu ul {
@@ -331,9 +385,23 @@ video {
 
 .dropdown-menu li a {
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f0f0f0;
+  background-color: transparent; /* Supprime le fond blanc */
+  transform: scale(1.1); /* Ajoute un léger zoom */
+  transition: transform 0.3s ease-in-out; /* Ajoute une transition pour le zoom */
 }
+
+/* ###### End Navbar ###### */
+
+
+
+
+
+
+
+
+

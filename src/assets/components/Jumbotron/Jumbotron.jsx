@@ -1,4 +1,4 @@
-
+import jumbotronImage from '/src/assets/Images/jumbotron.png';
 
 const Jumbotron = () => {
   return (
@@ -12,7 +12,7 @@ const Jumbotron = () => {
         </div>
       </div>
       <div className="mx-8 mb-8">
-        <img src="https://www.santacruzbicycles.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsantacruzbikesstatic%2FZli4YaWtHYXtT8Yb_Upper-Desktop.png%3Fauto%3Dformat%2Ccompress&w=2100&q=99" alt="Velo Image" className="w-full" style={{ borderRadius: '20px' }}/>
+        <img src={jumbotronImage} alt="Velo Image" className="w-full" style={{ borderRadius: '20px' }}/>
       </div>
       <p className="lg:w-2/3 mx-auto leading-relaxed text-center">Un VTT léger, puissant, et surprenant. Toutes les caractéristiques d'un RAYM sur le terrain. 150mm de débattement d'une suspension RAYMtech™ légendaire, des roues MX et une géométrie moderne donnent au VÉLO6RAPTOR PRORIDER™ les habiletés d'un vélo de trail, dont le comportement naturel est simplement boosté par la structure du cadre en deux blocs monolythes 300.</p>
     </section>
@@ -20,5 +20,3 @@ const Jumbotron = () => {
 };
 
 export default Jumbotron;
-
-
