@@ -411,5 +411,8 @@ video {
   transform: scaleX(-1);
 }
 
+.icon-spacing {
+  margin-right: 8px; 
+}
 
 /* ###### End Navbar ###### */

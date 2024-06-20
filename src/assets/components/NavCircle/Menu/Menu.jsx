@@ -72,17 +72,17 @@ const Navbar = () => {
         <ul>
           <li className="header__menu-item">
             <a href="#">
-              <FontAwesomeIcon icon={faAddressCard} /> Mon compte
+              <FontAwesomeIcon icon={faAddressCard} className="icon-spacing" /> Mon compte
             </a>
           </li>
           <li className="header__menu-item">
             <a href="#">
-              <FontAwesomeIcon icon={faArrowRightToBracket} /> Se connecter
+              <FontAwesomeIcon icon={faArrowRightToBracket} className="icon-spacing" /> Se connecter
             </a>
           </li>
           <li className="header__menu-item">
             <a href="#">
-              <FontAwesomeIcon icon={faArrowRightToBracket} className="inverted-icon" /> Se déconnecter
+              <FontAwesomeIcon icon={faArrowRightToBracket} className="inverted-icon icon-spacing" /> Se déconnecter
             </a>
           </li>
         </ul>
