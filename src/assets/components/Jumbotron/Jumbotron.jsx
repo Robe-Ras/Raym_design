@@ -6,7 +6,7 @@ const Jumbotron = () => {
       <div className="container px-5 py-8 mx-auto">
         <div className="flex flex-col text-center w-full">
           <h1 className="sm:text-5xl text-4xl font-medium title-font mb-4 text-white">
-            DÉCOUVREZ LE <span className="font-bold">VELO6RAPTOR PRORIDER</span>™
+            DÉCOUVREZ LE <span className="font-bold" style={{ color: 'palegreen' }}>VELO6RAPTOR PRORIDER™</span>
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Notre tout dernier VTT trail à la pointe de la technologie. 150mm RAYMtech™ Travel | MX Wheels</p>
         </div>
