@@ -155,11 +155,11 @@ main {
   object-fit: cover;
 }
 
-/* ### Hero Categories END### */
 
 .button-hover:hover {
   background: linear-gradient(to right, palegreen, skyblue);
-  border-color: transparent; /* Supprimez la bordure pour un effet plus propre */
-  color: black; /* Change la couleur du texte en noir */
+  border-color: transparent; 
+  color: black; 
 }
 
+/* ### Hero Categories END### */

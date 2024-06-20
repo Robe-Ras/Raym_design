@@ -1,6 +1,9 @@
 import './Menu.css';
 import { useEffect, useState, useRef } from 'react';
 import logo from '../../../Images/raymB.png'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faInfoCircle, faEnvelope, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'; // Importez les icônes nécessaires
+import { faAddressCard } from '@fortawesome/free-regular-svg-icons'; // Importez l'icône nécessaire
 
 const Navbar = () => {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -67,10 +70,21 @@ const Navbar = () => {
       </header>
       <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`} onMouseEnter={handleDropdownHover} onMouseLeave={handleDropdownLeave}>
         <ul>
-          <li><a href="#">Mon compte</a></li>
-          <li><a href="#">Connection</a></li>
-          <li><a href="#">Creer un compte</a></li>
-          <li><a href="#">Deconnection</a></li>
+          <li className="header__menu-item">
+            <a href="#">
+              <FontAwesomeIcon icon={faAddressCard} /> Mon compte
+            </a>
+          </li>
+          <li className="header__menu-item">
+            <a href="#">
+              <FontAwesomeIcon icon={faArrowRightToBracket} /> Se connecter
+            </a>
+          </li>
+          <li className="header__menu-item">
+            <a href="#">
+              <FontAwesomeIcon icon={faArrowRightToBracket} className="inverted-icon" /> Se déconnecter
+            </a>
+          </li>
         </ul>
       </div>
       <nav ref={navRef} className="header__nav nav-js" data-active={isRevealed ? 'true' : 'false'}>

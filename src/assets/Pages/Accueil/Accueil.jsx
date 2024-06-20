@@ -48,7 +48,9 @@ const Accueil = () => {
             </main>
             {/* #### END Hero Categories #### */}
 
+            {/* #### Jumbotron render #### */}
             <Jumbotron />
+            {/* #### END Jumbotron #### */}
 
         </div>
     );

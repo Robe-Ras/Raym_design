@@ -27,7 +27,7 @@ header {
 
 /* Bouton menu rond */
 .header__button {
-  z-index: 30; /* Assurez-vous que le z-index est supérieur à celui du menu */
+  z-index: 30; 
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -88,7 +88,7 @@ header {
   background-color: rgb(0, 0, 0);
   position: fixed;
   overflow: hidden;
-  z-index: 20; /* Assurez-vous que le z-index est inférieur à celui du bouton de menu */
+  z-index: 20; 
   top: 0;
   left: 0;
   width: 100%;
@@ -300,10 +300,10 @@ video {
     transform: scale(1.5);
   }
   70% {
-    transform: scale(0.9); /* Rétrécit en dessous de la taille normale */
+    transform: scale(0.9); 
   }
   90% {
-    transform: scale(1.1); /* Légère expansion avant de revenir à la taille normale */
+    transform: scale(1.1); 
   }
 }
 
@@ -325,27 +325,38 @@ video {
 
 .dropdown-menu {
   position: absolute;
-  top: 72px; /* Valeur par défaut pour les grands écrans */
-  right: 14em; /* Valeur par défaut pour les grands écrans */
+  top: 72px; 
+  right: 14em; 
   background-color: black;
   color: white;
-  border: 1px solid #ccc;
+  border: none; 
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 50; /* Assurez-vous que le z-index est supérieur à celui du conteneur */
+  z-index: 50; 
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-  padding: 0 20px; /* Ajoute du padding à gauche et à droite */
+  padding: 0 20px; 
 }
 
-.dropdown-menu li {
-  padding: 10px 0; /* Ajuste le padding en haut et en bas */
+.dropdown-menu li:first-child {
+  margin-top: 10px; 
+}
+
+.dropdown-menu li:last-child {
+  margin-bottom: 10px; 
 }
 
 .dropdown-menu li a {
   color: white;
+  font-size: 1.5rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: transparent; 
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; 
 }
 
 @keyframes dropdownBounce {
@@ -390,18 +401,15 @@ video {
 }
 
 .dropdown-menu li a:hover {
-  background-color: transparent; /* Supprime le fond blanc */
-  transform: scale(1.1); /* Ajoute un léger zoom */
-  transition: transform 0.3s ease-in-out; /* Ajoute une transition pour le zoom */
+  background-color: transparent; 
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; 
 }
 
+
+.inverted-icon {
+  transform: scaleX(-1);
+}
+
+
 /* ###### End Navbar ###### */
-
-
-
-
-
-
-
-
-
