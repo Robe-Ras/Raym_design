@@ -103,12 +103,13 @@ main {
   main {
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 80px;
+    margin-top: 20px; /* Réduisez cette valeur pour moins d'espace */
   }
   main .accueil-section {
-    width: 33.33vw;
+    width: 100%; /* Ajustez la largeur pour les petits écrans */
     height: auto;
-    min-height: 50vh; 
+    min-height: 50vh;
+    margin-bottom: 0.2em; /* Réduisez cette valeur pour moins d'espace */
   }
   main .accueil-section .content button {
     width: 80%;
@@ -122,9 +123,10 @@ main {
 }
 @media screen and (max-width: 480px) {
   main .accueil-section {
-    width: 33.33vw;
+    width: 100%; /* Ajustez la largeur pour les petits écrans */
     height: auto;
-    min-height: 50vh; 
+    min-height: 50vh;
+    margin-bottom: 0.2em; /* Réduisez cette valeur pour moins d'espace */
   }
   main .accueil-section .content button {
     width: 100%;
@@ -168,3 +170,21 @@ main {
 }
 
 /* ### Hero Categories END### */
+
+@media screen and (max-width: 1024px) {
+  .jumbotron {
+    margin-top: 1em; /* Ajoutez de la marge pour espacer les sections */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    margin-top: 1em; /* Ajoutez de la marge pour espacer les sections */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .jumbotron {
+    margin-top: 1em; /* Ajoutez de la marge pour espacer les sections */
+  }
+}
