@@ -80,9 +80,9 @@ const Navbar = () => {
       </header>
       <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`} onMouseEnter={handleDropdownHover} onMouseLeave={handleDropdownLeave}>
         <ul>
-        <li className="header__menu-item mt-10 mb-10 no-hover">
+        <li className="header__menu-item mt-10 mb-8 border-b border-gray-300">
             <a>
-               User1@gmail.com
+               <span className="font-bold text-xl">Username@gmail.com</span>
             </a>
           </li>
           <li className="header__menu-item">
