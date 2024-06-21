@@ -29,7 +29,7 @@ const products = [
 export default function ShoppingCart({ isOpen, onClose }) {
   return (
     <Transition show={isOpen}>
-      <Dialog className="relative z-10" onClose={onClose}>
+      <Dialog className="relative z-50" onClose={onClose}>
         <TransitionChild
           enter="ease-in-out duration-300" 
           enterFrom="opacity-0"
@@ -56,7 +56,7 @@ export default function ShoppingCart({ isOpen, onClose }) {
                   <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                     <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                       <div className="flex items-start justify-between">
-                        <DialogTitle className="text-lg font-medium text-gray-900">Shopping cart</DialogTitle>
+                        <DialogTitle className="text-3xl font-bold text-gray-900">Votre Panier</DialogTitle>
                         <div className="ml-3 flex h-7 items-center">
                           <button
                             type="button"
@@ -122,7 +122,7 @@ export default function ShoppingCart({ isOpen, onClose }) {
                       <div className="mt-6">
                         <a
                           href="#"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                          className="flex items-center justify-center rounded-md border border-transparent bg-green-300 px-6 py-3 text-base font-bold text-black shadow-sm hover:bg-green-400"
                         >
                           Checkout
                         </a>

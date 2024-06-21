@@ -27,7 +27,7 @@ const Navbar = () => {
   const handleUserIconLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 1000);
+    }, 300);
   };
 
   const handleDropdownHover = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
   const handleDropdownLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 1000);
+    }, 300);
   };
 
   const handleMenuButtonClick = () => {

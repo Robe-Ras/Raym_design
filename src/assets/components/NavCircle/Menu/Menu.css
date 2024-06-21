@@ -103,11 +103,11 @@ header {
 }
 
 .header__nav[data-active='true'] {
-  animation: reveal 0.7s ease-out forwards;
+  animation: reveal 0.5s ease-out forwards;
 }
 
 .header__nav[data-active='false'] {
-  animation: hide 1.4s ease-out forwards; 
+  animation: hide 0.5s ease-out forwards; 
 }
 
 .header__menu {
