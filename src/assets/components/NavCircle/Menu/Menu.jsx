@@ -122,6 +122,7 @@ const Navbar = () => {
         <ul className="header__menu">
           <li className="header__menu-item"><a href="#">Accueil</a></li>
           <li className="header__menu-item"><a href="#">La marque</a></li>
+          <li className="header__menu-item"><a href="#">Boutique</a></li>
           <li className="header__menu-item"><a href="#">Configurateur</a></li>
           <li className="header__menu-item"><a href="#">Entretien</a></li>
           <li className="header__menu-item"><a href="#">Contacts</a></li>
